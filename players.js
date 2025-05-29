@@ -14,7 +14,7 @@ const playerRankings = {
             kast: "82%",
             adr: 225
         },
-        eliminated: false
+        eliminated: false,
     },
     {
         id: 2,
@@ -42,7 +42,8 @@ const playerRankings = {
             kast: "73%",
             acs: 253.9,
         },
-        eliminated: true // Example of an eliminated player
+        eliminated: true, // Example of an eliminated player,
+        placement : 12,
     },
     {
         id: 4,

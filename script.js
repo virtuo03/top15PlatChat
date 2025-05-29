@@ -1,16 +1,16 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const playersContainer = document.getElementById('players-container');
     const toggleViewBtn = document.getElementById('toggle-view');
     const showEliminatedCheckbox = document.getElementById('show-eliminated');
     const talentButtons = document.querySelectorAll('.talent-btn');
-    
+
     let currentView = 'grid'; // Default view
-    
+
     // Initial render
     renderPlayers();
-    
+
     // Toggle between grid and list view
-    toggleViewBtn.addEventListener('click', function() {
+    toggleViewBtn.addEventListener('click', function () {
         if (currentView === 'grid') {
             playersContainer.classList.remove('grid-view');
             playersContainer.classList.add('list-view');
@@ -23,35 +23,35 @@ document.addEventListener('DOMContentLoaded', function() {
             toggleViewBtn.innerHTML = '<i class="fas fa-th-list"></i> TOGGLE LIST VIEW';
         }
     });
-    
+
     // Toggle showing eliminated players
     showEliminatedCheckbox.addEventListener('change', renderPlayers);
-    
+
     // Talent selection
     talentButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
             // Remove active class from all buttons
             talentButtons.forEach(btn => btn.classList.remove('active'));
-            
+
             // Add active class to clicked button
             this.classList.add('active');
-            
+
             // Update current talent and re-render
             currentTalent = this.dataset.talent;
             renderPlayers();
         });
     });
-    
+
     // Render players based on current filters
     function renderPlayers() {
         playersContainer.innerHTML = '';
-        
+
         const showEliminated = showEliminatedCheckbox.checked;
         const currentPlayers = playerRankings[currentTalent];
-        
+
         // Sort players by rank
         const sortedPlayers = [...currentPlayers].sort((a, b) => a.rank - b.rank);
-        
+
         sortedPlayers.forEach(player => {
             if (!player.eliminated || showEliminated) {
                 const playerCard = createPlayerCard(player);
@@ -59,18 +59,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
+
     // Create a player card element
     function createPlayerCard(player) {
         const card = document.createElement('div');
         card.className = `player-card ${player.eliminated ? 'eliminated' : ''}`;
-        
+        // Add placement data if eliminated
+        if (player.eliminated && player.placement) {
+            card.dataset.placement = `#${player.placement}`;
+        }
         // Add rank-specific class
         let rankClass = '';
         if (player.rank === 1) rankClass = 'rank-1';
         else if (player.rank === 2) rankClass = 'rank-2';
         else if (player.rank === 3) rankClass = 'rank-3';
-        
+
         card.innerHTML = `
             <img src="${player.image}" alt="${player.name}" class="player-image" onerror="this.src='playerImages/default.jpg'">
             <div class="player-info">
@@ -100,7 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-        
+
         return card;
     }
 });

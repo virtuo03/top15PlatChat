@@ -330,6 +330,24 @@ input:checked + .slider:before {
 
 .player-card.eliminated {
     position: relative;
+    overflow: hidden;
+}
+
+.player-card.eliminated::before {
+    content: attr(data-placement);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(255, 70, 85, 0.8);
+    z-index: 2;
+    pointer-events: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.player-card.eliminated .player-info {
+    opacity: 0.7;
 }
 
 .player-card.eliminated::after {
