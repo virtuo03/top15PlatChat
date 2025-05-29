@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const playersContainer = document.getElementById('players-container');
     const toggleViewBtn = document.getElementById('toggle-view');
     const showEliminatedCheckbox = document.getElementById('show-eliminated');
+    const talentButtons = document.querySelectorAll('.talent-btn');
     
     let currentView = 'grid'; // Default view
     
@@ -26,14 +27,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Toggle showing eliminated players
     showEliminatedCheckbox.addEventListener('change', renderPlayers);
     
+    // Talent selection
+    talentButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Remove active class from all buttons
+            talentButtons.forEach(btn => btn.classList.remove('active'));
+            
+            // Add active class to clicked button
+            this.classList.add('active');
+            
+            // Update current talent and re-render
+            currentTalent = this.dataset.talent;
+            renderPlayers();
+        });
+    });
+    
     // Render players based on current filters
     function renderPlayers() {
         playersContainer.innerHTML = '';
         
         const showEliminated = showEliminatedCheckbox.checked;
+        const currentPlayers = playerRankings[currentTalent];
         
         // Sort players by rank
-        const sortedPlayers = [...players].sort((a, b) => a.rank - b.rank);
+        const sortedPlayers = [...currentPlayers].sort((a, b) => a.rank - b.rank);
         
         sortedPlayers.forEach(player => {
             if (!player.eliminated || showEliminated) {
@@ -61,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <p class="player-team">${player.team}</p>
                 <div class="player-rank">
                     <div class="rank-badge ${rankClass}">${player.rank}</div>
-                    <span>PlatChat Ranking</span>
+                    <span>${currentTalent.toUpperCase()} Ranking</span>
                 </div>
                 <div class="player-stats">
                     <div class="stat">
