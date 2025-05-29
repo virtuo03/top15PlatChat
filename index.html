@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Toronto Valorant - Top 15 Players</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="assets/valLogo.png" alt="Valorant Logo" class="valorant-logo">
+            <div class="header-text">
+                <h1>MASTER TORONTO</h1>
+                <p class="subtitle">TOP 15 PLAYER RANKINGS</p>
+            </div>
+        </div>
+        
+        <div class="talent-selector">
+            <div class="selector-label">VIEW RANKINGS BY:</div>
+            <div class="talent-buttons">
+                <button class="talent-btn active" data-talent="plat-chat">PLATCHAT</button>
+                <button class="talent-btn" data-talent="sideshow">SIDESHOW</button>
+                <button class="talent-btn" data-talent="bren">BREN</button>
+                <button class="talent-btn" data-talent="average">AVERAGE</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="controls">
+            <button id="toggle-view">
+                <i class="fas fa-th-large"></i> TOGGLE VIEW
+            </button>
+            <div class="eliminated-toggle">
+                <label for="show-eliminated">
+                    <i class="fas fa-eye"></i> SHOW ELIMINATED:
+                </label>
+                <label class="switch">
+                    <input type="checkbox" id="show-eliminated" checked>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+
+        <div class="players-container grid-view" id="players-container">
+            <!-- Players will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="assets/valorant-logo-white.png" alt="Valorant Logo">
+            </div>
+            <div class="footer-text">
+                <p>Tournament tracker unofficial. Rankings by various Valorant analysts. Made by Virtuofabio.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="players.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
