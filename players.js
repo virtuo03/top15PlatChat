@@ -272,7 +272,8 @@ const playerRankings = {
             kast: "73%",
             acs: 253.9,
         },
-        eliminated: true // Example of an eliminated player
+        eliminated: true,
+        placement : 12,
     },
     {
         id: 4,
@@ -484,7 +485,8 @@ const playerRankings = {
             kast: "73%",
             acs: 253.9,
         },
-        eliminated: true // Example of an eliminated player
+        eliminated: true,
+        placement : 12,
     },
     {
         id: 4,
@@ -696,7 +698,8 @@ const playerRankings = {
             kast: "73%",
             acs: 253.9,
         },
-        eliminated: true // Example of an eliminated player
+        eliminated: true,
+        placement : 12,
     },
     {
         id: 4,
@@ -908,7 +911,8 @@ const playerRankings = {
             kast: "73%",
             acs: 253.9,
         },
-        eliminated: true // Example of an eliminated player
+        eliminated: true,
+        placement : 12,
     },
     {
         id: 4,
@@ -1083,4 +1087,3 @@ const playerRankings = {
 
 // Current active talent
 let currentTalent = "plat-chat";
-
