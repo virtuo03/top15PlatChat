@@ -236,7 +236,7 @@ const playerRankings = {
         id: 1,
         name: "Aspas",
         team: "MIBR",
-        rank: 1,
+        rank: 2,
         image: "playerImages/aspas.avif",
         stats: {
             rating: 1.35,
@@ -250,7 +250,7 @@ const playerRankings = {
         id: 2,
         name: "Trent",
         team: "G2",
-        rank: 2,
+        rank: 1,
         image: "playerImages/trent.png",
         stats: {
             rating: 1.30,
@@ -659,10 +659,10 @@ const playerRankings = {
     ],
     "tmv": [
         {
-        id: 1,
+        id: 3,
         name: "Aspas",
         team: "MIBR",
-        rank: 1,
+        rank: 3,
         image: "playerImages/aspas.avif",
         stats: {
             rating: 1.35,
@@ -676,7 +676,7 @@ const playerRankings = {
         id: 2,
         name: "Trent",
         team: "G2",
-        rank: 2,
+        rank: 1,
         image: "playerImages/trent.png",
         stats: {
             rating: 1.30,
@@ -687,10 +687,10 @@ const playerRankings = {
         eliminated: false
     },
     {
-        id: 3,
+        id: 1,
         name: "Jemkin",
         team: "RRQ",
-        rank: 3,
+        rank: 2,
         image: "playerImages/jemkin.png",
         stats: {
             rating: 1.22,

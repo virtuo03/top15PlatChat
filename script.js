@@ -60,6 +60,87 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Add these variables at the top
+    const modal = document.getElementById('player-modal');
+    const closeModal = document.querySelector('.close-modal');
+
+    // Add this after your createPlayerCard function
+    function calculatePlayerStats(playerName) {
+        const stats = {
+            highest: 15,
+            lowest: 1,
+            average: 0,
+            top5Count: 0,
+            rankings: []
+        };
+
+        let total = 0;
+        let count = 0;
+
+        // Find player in all rankings
+        Object.entries(playerRankings).forEach(([talent, players]) => {
+            const player = players.find(p => p.name === playerName);
+            if (player) {
+                stats.highest = Math.min(stats.highest, player.rank);
+                stats.lowest = Math.max(stats.lowest, player.rank);
+                total += player.rank;
+                count++;
+
+                if (player.rank <= 5) stats.top5Count++;
+
+                stats.rankings.push({
+                    talent: talent.toUpperCase(),
+                    rank: player.rank
+                });
+            }
+        });
+
+        stats.average = count > 0 ? (total / count).toFixed(1) : 'N/A';
+
+        return stats;
+    }
+
+    function showPlayerModal(player) {
+        const stats = calculatePlayerStats(player.name);
+
+        // Set modal content
+        document.getElementById('modal-player-name').textContent = player.name;
+        document.getElementById('modal-player-team').textContent = player.team;
+        document.getElementById('modal-player-image').src = player.image;
+        document.getElementById('modal-high-rank').textContent = `#${stats.highest}`;
+        document.getElementById('modal-avg-rank').textContent = `#${stats.average}`;
+        document.getElementById('modal-low-rank').textContent = `#${stats.lowest}`;
+        document.getElementById('modal-top5-count').textContent = stats.top5Count;
+
+        // Populate rankings breakdown
+        const rankingsList = document.getElementById('modal-rankings-list');
+        rankingsList.innerHTML = '';
+
+        stats.rankings.forEach(r => {
+            const div = document.createElement('div');
+            div.className = 'ranking-item';
+            div.innerHTML = `
+      <span class="ranking-name">${r.talent}</span>
+      <span>#${r.rank}</span>
+    `;
+            rankingsList.appendChild(div);
+        });
+
+        // Show modal
+        modal.style.display = 'block';
+    }
+
+    // Add event listeners
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+
     // Create a player card element
     function createPlayerCard(player) {
         const card = document.createElement('div');
@@ -68,6 +149,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (player.eliminated && player.placement) {
             card.dataset.placement = `#${player.placement}`;
         }
+
+        // Add click handler
+        card.addEventListener('click', () => {
+            showPlayerModal(player);
+        });
         // Add rank-specific class
         let rankClass = '';
         if (player.rank === 1) rankClass = 'rank-1';

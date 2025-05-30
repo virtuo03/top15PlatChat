@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Master Toronto Valorant - Top 15 Players</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Oxanium:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
     <header>
         <div class="header-content">
@@ -17,7 +21,7 @@
                 <p class="subtitle">MASTER TORONTO</p>
             </div>
         </div>
-        
+
         <div class="talent-selector">
             <div class="selector-label">VIEW RANKINGS BY:</div>
             <div class="talent-buttons">
@@ -51,7 +55,41 @@
             <!-- Players will be inserted here by JavaScript -->
         </div>
     </main>
-
+    <!-- Add this modal at the bottom of your body -->
+    <div id="player-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-header">
+                <img id="modal-player-image" src="" alt="Player" class="modal-player-image">
+                <div>
+                    <h2 id="modal-player-name"></h2>
+                    <p id="modal-player-team"></p>
+                </div>
+            </div>
+            <div class="modal-stats">
+                <div class="stat-row">
+                    <span>Highest Ranking</span>
+                    <strong id="modal-high-rank"></strong>
+                </div>
+                <div class="stat-row">
+                    <span>Average Ranking</span>
+                    <strong id="modal-avg-rank"></strong>
+                </div>
+                <div class="stat-row">
+                    <span>Lowest Ranking</span>
+                    <strong id="modal-low-rank"></strong>
+                </div>
+                <div class="stat-row">
+                    <span>Times Top 5</span>
+                    <strong id="modal-top5-count"></strong>
+                </div>
+            </div>
+            <div class="rankings-breakdown">
+                <h3>Rankings Breakdown</h3>
+                <div id="modal-rankings-list"></div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="footer-content">
             <div class="footer-logo">
@@ -66,4 +104,5 @@
     <script src="players.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
