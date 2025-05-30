@@ -103,10 +103,10 @@ const playerRankings = {
     },
     {
         id: 8,
-        name: "Forsaken",
+        name: "f0rsaken",
         team: "Team H",
         rank: 8,
-        image: "playerImages/forsaken.png",
+        image: "playerImages/f0rsaken.png",
         stats: {
             rating: 1.15,
             kd: 1.20,
@@ -333,10 +333,10 @@ const playerRankings = {
     },
     {
         id: 8,
-        name: "Forsaken",
+        name: "f0rsaken",
         team: "Team H",
         rank: 8,
-        image: "playerImages/forsaken.png",
+        image: "playerImages/f0rsaken.png",
         stats: {
             rating: 1.15,
             kd: 1.20,
@@ -546,10 +546,10 @@ const playerRankings = {
     },
     {
         id: 8,
-        name: "Forsaken",
+        name: "f0rsaken",
         team: "Team H",
         rank: 8,
-        image: "playerImages/forsaken.png",
+        image: "playerImages/f0rsaken.png",
         stats: {
             rating: 1.15,
             kd: 1.20,
@@ -759,10 +759,10 @@ const playerRankings = {
     },
     {
         id: 8,
-        name: "Forsaken",
+        name: "f0rsaken",
         team: "Team H",
         rank: 8,
-        image: "playerImages/forsaken.png",
+        image: "playerImages/f0rsaken.png",
         stats: {
             rating: 1.15,
             kd: 1.20,
@@ -972,10 +972,10 @@ const playerRankings = {
     },
     {
         id: 8,
-        name: "Forsaken",
+        name: "f0rsaken",
         team: "Team H",
         rank: 8,
-        image: "playerImages/forsaken.png",
+        image: "playerImages/f0rsaken.png",
         stats: {
             rating: 1.15,
             kd: 1.20,
