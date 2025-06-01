@@ -45,20 +45,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // Render players based on current filters
     function renderPlayers() {
         playersContainer.innerHTML = '';
-
         const showEliminated = showEliminatedCheckbox.checked;
-        const currentPlayers = playerRankings[currentTalent];
+        const currentRankings = playerRankings[currentTalent];
 
         // Sort players by rank
-        const sortedPlayers = [...currentPlayers].sort((a, b) => a.rank - b.rank);
+        const sortedRankings = [...currentRankings].sort((a, b) => a.rank - b.rank);
 
-        sortedPlayers.forEach(player => {
+        sortedRankings.forEach(ranking => {
+            const player = allPlayers[ranking.playerId];
             if (!player.eliminated || showEliminated) {
-                const playerCard = createPlayerCard(player);
+                const playerCard = createPlayerCard(player, ranking.rank);
                 playersContainer.appendChild(playerCard);
             }
         });
     }
+
 
     // Add these variables at the top
     const modal = document.getElementById('player-modal');
@@ -78,19 +79,19 @@ document.addEventListener('DOMContentLoaded', function () {
         let count = 0;
 
         // Find player in all rankings
-        Object.entries(playerRankings).forEach(([talent, players]) => {
-            const player = players.find(p => p.name === playerName);
-            if (player) {
-                stats.highest = Math.min(stats.highest, player.rank);
-                stats.lowest = Math.max(stats.lowest, player.rank);
-                total += player.rank;
+        Object.entries(playerRankings).forEach(([talent, rankings]) => {
+            const ranking = rankings.find(r => allPlayers[r.playerId].name === playerName);
+            if (ranking) {
+                stats.highest = Math.min(stats.highest, ranking.rank);
+                stats.lowest = Math.max(stats.lowest, ranking.rank);
+                total += ranking.rank;
                 count++;
 
-                if (player.rank <= 5) stats.top5Count++;
+                if (ranking.rank <= 5) stats.top5Count++;
 
                 stats.rankings.push({
                     talent: talent.toUpperCase(),
-                    rank: player.rank
+                    rank: ranking.rank
                 });
             }
         });
@@ -142,53 +143,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Create a player card element
-    function createPlayerCard(player) {
+    function createPlayerCard(player, rank) {
         const card = document.createElement('div');
         card.className = `player-card ${player.eliminated ? 'eliminated' : ''}`;
-        // Add placement data if eliminated
+
         if (player.eliminated && player.placement) {
             card.dataset.placement = `#${player.placement}`;
         }
 
-        // Add click handler
+        // Add rank-specific class
+        let rankClass = '';
+        if (rank === 1) rankClass = 'rank-1';
+        else if (rank === 2) rankClass = 'rank-2';
+        else if (rank === 3) rankClass = 'rank-3';
+
+        card.innerHTML = `
+        <img src="${player.image}" alt="${player.name}" class="player-image" onerror="this.src='playerImages/default.jpg'">
+        <div class="player-info">
+            <h2 class="player-name">${player.name}</h2>
+            <p class="player-team">${player.team}</p>
+            <div class="player-rank">
+                <div class="rank-badge ${rankClass}">${rank}</div>
+                <span>${currentTalent.toUpperCase()} Ranking</span>
+            </div>
+            <div class="player-stats">
+                <div class="stat">
+                    <div class="stat-value">${player.stats.rating}</div>
+                    <div class="stat-label">Rating</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">${player.stats.kd}</div>
+                    <div class="stat-label">K/D</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">${player.stats.kast}</div>
+                    <div class="stat-label">KAST</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value">${player.stats.adr}</div>
+                    <div class="stat-label">ADR</div>
+                </div>
+            </div>
+        </div>
+    `;
+
         card.addEventListener('click', () => {
             showPlayerModal(player);
         });
-        // Add rank-specific class
-        let rankClass = '';
-        if (player.rank === 1) rankClass = 'rank-1';
-        else if (player.rank === 2) rankClass = 'rank-2';
-        else if (player.rank === 3) rankClass = 'rank-3';
-
-        card.innerHTML = `
-            <img src="${player.image}" alt="${player.name}" class="player-image" onerror="this.src='playerImages/default.jpg'">
-            <div class="player-info">
-                <h2 class="player-name">${player.name}</h2>
-                <p class="player-team">${player.team}</p>
-                <div class="player-rank">
-                    <div class="rank-badge ${rankClass}">${player.rank}</div>
-                    <span>${currentTalent.toUpperCase()} Ranking</span>
-                </div>
-                <div class="player-stats">
-                    <div class="stat">
-                        <div class="stat-value">${player.stats.rating}</div>
-                        <div class="stat-label">Rating</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">${player.stats.kd}</div>
-                        <div class="stat-label">K/D</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">${player.stats.kast}</div>
-                        <div class="stat-label">KAST</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-value">${player.stats.adr}</div>
-                        <div class="stat-label">ADR</div>
-                    </div>
-                </div>
-            </div>
-        `;
 
         return card;
     }
