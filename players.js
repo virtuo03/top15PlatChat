@@ -35,10 +35,10 @@ const allPlayers = {
             rating: 1.22,
             kd: 1.30,
             kast: "73%",
-            acs: 253.9
+            adr: 161.3,
         },
         eliminated: false,
-        placement: 12
+        placement: 8,
     },
     "kaajak": {
         id: 4,
@@ -46,10 +46,10 @@ const allPlayers = {
         team: "FNC",
         image: "playerImages/kaajak.png",
         stats: {
-            rating: 1.25,
-            kd: 1.30,
-            kast: "78%",
-            adr: 205
+            rating: 1.24,
+            kd: 1.38,
+            kast: "76%",
+            adr: 160.6
         },
         eliminated: false
     },
@@ -59,10 +59,10 @@ const allPlayers = {
         team: "G2",
         image: "playerImages/leaf.png",
         stats: {
-            rating: 1.22,
-            kd: 1.28,
-            kast: "77%",
-            adr: 200
+            rating: 1.14,
+            kd: 1.19,
+            kast: "74%",
+            adr: 153.6,
         },
         eliminated: false
     },
@@ -72,10 +72,10 @@ const allPlayers = {
         team: "TH",
         image: "playerImages/riens.png",
         stats: {
-            rating: 1.20,
-            kd: 1.25,
-            kast: "76%",
-            adr: 195
+            rating: 1.09,
+            kd: 1.13,
+            kast: "78%",
+            adr: 139.5
         },
         eliminated: false
     },
@@ -85,10 +85,10 @@ const allPlayers = {
         team: "XLG",
         image: "playerImages/rarga.png",
         stats: {
-            rating: 1.18,
-            kd: 1.22,
-            kast: "75%",
-            adr: 190
+            rating: 1.25,
+            kd: 1.29,
+            kast: "73%",
+            adr: 168.8,
         },
         eliminated: false
     },
@@ -98,12 +98,12 @@ const allPlayers = {
         team: "PRX",
         image: "playerImages/f0rsaken.png",
         stats: {
-            rating: 1.15,
-            kd: 1.20,
-            kast: "74%",
-            adr: 185
+            rating: 1.11,
+            kd: 1.18,
+            kast: "73%",
+            adr: 142.9
         },
-        eliminated: false
+        eliminated: false,
     },
     "nats": {
         id: 9,
@@ -111,10 +111,10 @@ const allPlayers = {
         team: "TL",
         image: "playerImages/nats.png",
         stats: {
-            rating: 1.12,
-            kd: 1.18,
-            kast: "73%",
-            adr: 180
+            rating: 1.08,
+            kd: 1.15,
+            kast: "70%",
+            adr: 141.8,
         },
         eliminated: false
     },
@@ -137,62 +137,62 @@ const allPlayers = {
         team: "SEN",
         image: "playerImages/bang.png",
         stats: {
-            rating: 1.08,
-            kd: 1.12,
-            kast: "71%",
-            adr: 170
+            rating: 1.13,
+            kd: 1.18,
+            kast: "76%",
+            adr: 131.9,
         },
         eliminated: false
     },
-    "player12": {
+    "Keiko": {
         id: 12,
-        name: "Player 12",
-        team: "Team L",
-        image: "playerImages/deafult.png",
+        name: "Keiko",
+        team: "TL",
+        image: "playerImages/keiko.png",
         stats: {
-            rating: 1.05,
+            rating: 1.09,
             kd: 1.10,
-            kast: "70%",
-            adr: 165
+            kast: "72%",
+            adr: 141.6,
         },
         eliminated: false
     },
-    "player13": {
+    "t3xture": {
         id: 13,
-        name: "Player 13",
-        team: "Team M",
-        image: "playerImages/deafult.png",
+        name: "t3xture",
+        team: "GENG",
+        image: "playerImages/t3xture.png",
         stats: {
-            rating: 1.02,
-            kd: 1.08,
-            kast: "69%",
-            adr: 160
+            rating: 1.11,
+            kd: 1.21,
+            kast: "70%",
+            adr: 154.8,
         },
         eliminated: false
     },
-    "player14": {
+    "Jinggg": {
         id: 14,
-        name: "Player 14",
-        team: "Team N",
-        image: "playerImages/deafult.png",
+        name: "Jinggg",
+        team: "PRX",
+        image: "playerImages/Jinggg.png",
         stats: {
-            rating: 1.00,
-            kd: 1.05,
-            kast: "68%",
-            adr: 155
+            rating: 1.14,
+            kd: 1.18,
+            kast: "76%",
+            adr: 145.4,
         },
         eliminated: false
     },
-    "player15": {
+    "Verno": {
         id: 15,
-        name: "Player 15",
-        team: "Team O",
-        image: "playerImages/deafult.png",
+        name: "Verno",
+        team: "MIBR",
+        image: "playerImages/verno.png",
         stats: {
-            rating: 0.98,
-            kd: 1.02,
-            kast: "67%",
-            adr: 150
+            rating: 1.18,
+            kd: 1.26,
+            kast: "77%",
+            adr: 136.7,
         },
         eliminated: false
     },
@@ -216,13 +216,41 @@ const allPlayers = {
         team: "FNC",
         image: "playerImages/crashies.png",
         stats: {
-            rating: 1.15,
-            kd: 1.20,
-            kast: "75%",
-            adr: 180
+            rating: 1.09,
+            kd: 1.14,
+            kast: "76%",
+            adr: 128.8,
         },
         eliminated: false,
         placement: 3,
+    },
+    "Karon" : {
+        id: 18,
+        name: "Karon",
+        team: "GENG",
+        image: "playerImages/karon.png",
+        stats: {
+            rating: 1.08,
+            kd: 1.10,
+            kast: "75%",
+            adr: 134.3,
+        },
+        eliminated: false,
+        placement: 5,
+    },
+    "Whzy" : {
+        id: 19,
+        name: "Whzy",
+        team: "BLG",
+        image: "playerImages/whzy.png",
+        stats: {
+            rating: 1.21,
+            kd: 1.28,
+            kast: "73%",
+            adr: 166.9,
+        },
+        eliminated: false,
+        placement: 6,
     },
     // Add all other players here...
 };
