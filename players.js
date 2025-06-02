@@ -207,7 +207,8 @@ const allPlayers = {
             kast: "67%",
             adr: 150
         },
-        eliminated: false,
+        eliminated: true,
+        placement: 12,
     },
     "crashies" : {
         id: 17,
@@ -221,7 +222,7 @@ const allPlayers = {
             adr: 180
         },
         eliminated: false,
-        placement: 5,
+        placement: 3,
     },
     // Add all other players here...
 };
