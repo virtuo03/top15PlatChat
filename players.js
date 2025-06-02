@@ -210,7 +210,35 @@ const allPlayers = {
         eliminated: true,
         placement: 12,
     },
-    "crashies" : {
+    "bren": {
+        id: 16,
+        name: "Bren",
+        team: "PlatChat",
+        image: "assets/bren.jpg",
+        stats: {
+            rating: 0.98,
+            kd: 1.02,
+            kast: "67%",
+            adr: 150
+        },
+        eliminated: true,
+        placement: 11,
+    },
+    "mimi": {
+        id: 16,
+        name: "Mimi",
+        team: "PlatChat",
+        image: "assets/aevilcat.webp",
+        stats: {
+            rating: 0.98,
+            kd: 1.02,
+            kast: "67%",
+            adr: 150
+        },
+        eliminated: true,
+        placement: 10,
+    },
+    "crashies": {
         id: 17,
         name: "Crashies",
         team: "FNC",
@@ -224,7 +252,7 @@ const allPlayers = {
         eliminated: false,
         placement: 3,
     },
-    "Karon" : {
+    "Karon": {
         id: 18,
         name: "Karon",
         team: "GENG",
@@ -238,7 +266,7 @@ const allPlayers = {
         eliminated: false,
         placement: 5,
     },
-    "Whzy" : {
+    "Whzy": {
         id: 19,
         name: "Whzy",
         team: "BLG",
@@ -269,10 +297,10 @@ const playerRankings = {
         { playerId: "nats", rank: 9 },
         { playerId: "zekken", rank: 10 },
         { playerId: "bang", rank: 11 },
-        { playerId: "player12", rank: 12 },
-        { playerId: "player13", rank: 13 },
-        { playerId: "player14", rank: 14 },
-        { playerId: "player15", rank: 15 }
+        { playerId: "Verno", rank: 12 },
+        { playerId: "crashies", rank: 13 },
+        { playerId: "Karon", rank: 14 },
+        { playerId: "Whzy", rank: 15 }
 
     ],
     "sideshow": [
@@ -280,38 +308,11 @@ const playerRankings = {
 
     ],
     "bren": [
-        { playerId: "aspas", rank: 2 },
-        { playerId: "trent", rank: 1 },
-        { playerId: "jemkin", rank: 3 },
-        { playerId: "kaajak", rank: 4 },
-        { playerId: "leaf", rank: 5 },
-        { playerId: "riens", rank: 6 },
-        { playerId: "rarga", rank: 7 },
-        { playerId: "f0rsaken", rank: 8 },
-        { playerId: "nats", rank: 9 },
-        { playerId: "zekken", rank: 10 },
-        { playerId: "bang", rank: 11 },
-        { playerId: "player12", rank: 12 },
-        { playerId: "player13", rank: 13 },
-        { playerId: "player14", rank: 14 },
-        { playerId: "player15", rank: 15 }
+        { playerId: "bren", rank: 1 },
+
     ],
     "mimi": [
-        { playerId: "aspas", rank: 2 },
-        { playerId: "trent", rank: 1 },
-        { playerId: "jemkin", rank: 3 },
-        { playerId: "kaajak", rank: 4 },
-        { playerId: "leaf", rank: 5 },
-        { playerId: "riens", rank: 6 },
-        { playerId: "rarga", rank: 7 },
-        { playerId: "f0rsaken", rank: 8 },
-        { playerId: "nats", rank: 9 },
-        { playerId: "zekken", rank: 10 },
-        { playerId: "bang", rank: 11 },
-        { playerId: "player12", rank: 12 },
-        { playerId: "player13", rank: 13 },
-        { playerId: "player14", rank: 14 },
-        { playerId: "player15", rank: 15 }
+        { playerId: "mimi", rank: 1 },
     ],
     "tmv": [
         { playerId: "aspas", rank: 2 },
@@ -342,10 +343,10 @@ const playerRankings = {
         { playerId: "bang", rank: 10 },
         { playerId: "zekken", rank: 7 },
         { playerId: "rarga", rank: 11 },
-        { playerId: "player12", rank: 12 },
-        { playerId: "player13", rank: 13 },
-        { playerId: "player14", rank: 14 },
-        { playerId: "player15", rank: 15 }
+        { playerId: "nats", rank: 12 },
+        { playerId: "t3xture", rank: 13 },
+        { playerId: "Jinggg", rank: 14 },
+        { playerId: "Verno", rank: 15 }
     ]
     // Add other talent rankings...
 };
