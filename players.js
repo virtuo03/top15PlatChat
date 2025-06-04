@@ -144,7 +144,7 @@ const allPlayers = {
         },
         eliminated: false
     },
-    "Keiko": {
+    "keiko": {
         id: 12,
         name: "Keiko",
         team: "TL",
@@ -183,7 +183,7 @@ const allPlayers = {
         },
         eliminated: false
     },
-    "Verno": {
+    "verno": {
         id: 15,
         name: "Verno",
         team: "MIBR",
@@ -252,7 +252,7 @@ const allPlayers = {
         eliminated: false,
         placement: 3,
     },
-    "Karon": {
+    "karon": {
         id: 18,
         name: "Karon",
         team: "GENG",
@@ -266,7 +266,7 @@ const allPlayers = {
         eliminated: false,
         placement: 5,
     },
-    "Whzy": {
+    "whzy": {
         id: 19,
         name: "Whzy",
         team: "BLG",
@@ -280,27 +280,69 @@ const allPlayers = {
         eliminated: false,
         placement: 6,
     },
+    "miniboo": {
+        id: 19,
+        name: "Miniboo",
+        team: "TH",
+        image: "playerImages/miniboo.png",
+        stats: {
+            rating: 1.10,
+            kd: 1.22,
+            kast: "72%",
+            adr: 151.3,
+        },
+        eliminated: false,
+        placement: 6,
+    },
+    "alfajer": {
+        id: 20,
+        name: "Alfajer",
+        team: "FNC",
+        image: "playerImages/alfajer.png",
+        stats: {
+            rating: 0.99,
+            kd: 1.08,
+            kast: "70%",
+            adr: 142.7,
+        },
+        eliminated: false,
+        placement: 4,
+    },
+    "chronicle": {
+        id: 21,
+        name: "Chronicle",
+        team: "FNC",
+        image: "playerImages/chronicle.png",
+        stats: {
+            rating: 1.06,
+            kd: 1.10,
+            kast: "76%",
+            adr: 131.1,
+        },
+        eliminated: false,
+        placement: 7,
+    },
     // Add all other players here...
 };
 
 // Rankings by talent (just references to player IDs)
 const playerRankings = {
     "plat-chat": [
-        { playerId: "aspas", rank: 1 },
-        { playerId: "trent", rank: 2 },
-        { playerId: "jemkin", rank: 3 },
-        { playerId: "kaajak", rank: 4 },
-        { playerId: "leaf", rank: 5 },
-        { playerId: "riens", rank: 6 },
-        { playerId: "rarga", rank: 7 },
-        { playerId: "f0rsaken", rank: 8 },
-        { playerId: "nats", rank: 9 },
-        { playerId: "zekken", rank: 10 },
+        { playerId: "aspas", rank: 3 },
+        { playerId: "trent", rank: 5 },
+        { playerId: "jemkin", rank: 1 },
+        { playerId: "kaajak", rank: 2 },
+        { playerId: "leaf", rank: 4 },
+        { playerId: "riens", rank: 9 },
+        { playerId: "rarga", rank: 8 },
+        { playerId: "f0rsaken", rank: 7 },
+        { playerId: "t3xture", rank: 10 },
+        { playerId: "zekken", rank: 6 },
         { playerId: "bang", rank: 11 },
-        { playerId: "Verno", rank: 12 },
-        { playerId: "crashies", rank: 13 },
-        { playerId: "Karon", rank: 14 },
-        { playerId: "Whzy", rank: 15 }
+        { playerId: "Jinggg", rank: 12 },
+        { playerId: "miniboo", rank: 13 },
+        { playerId: "nats", rank: 14 },
+        { playerId: "karon", rank: 15 }
 
     ],
     "sideshow": [
@@ -308,16 +350,31 @@ const playerRankings = {
 
     ],
     "bren": [
-        { playerId: "bren", rank: 1 },
+        { playerId: "jemkin", rank: 1 },
+        { playerId: "aspas", rank: 2 },
+        { playerId: "leaf", rank: 3 },
+        { playerId: "bang", rank: 4 },
+        { playerId: "riens", rank: 5 },
+        { playerId: "miniboo", rank: 6 },
+        { playerId: "trent", rank: 7 },
+        { playerId: "kaajak", rank: 8 },
+        { playerId: "t3xture", rank: 9 },
+        { playerId: "zekken", rank: 10 },
+        { playerId: "bang", rank: 11 },
+        { playerId: "crashies", rank: 12 },
+        { playerId: "verno", rank: 15 },
+        { playerId: "jinggg", rank: 13 },
+        { playerId: "nats", rank: 14 },
+
 
     ],
     "mimi": [
         { playerId: "mimi", rank: 1 },
     ],
     "tmv": [
-        { playerId: "aspas", rank: 2 },
+        { playerId: "aspas", rank: 3 },
         { playerId: "trent", rank: 1 },
-        { playerId: "jemkin", rank: 3 },
+        { playerId: "jemkin", rank: 2 },
         { playerId: "kaajak", rank: 4 },
         { playerId: "leaf", rank: 5 },
         { playerId: "riens", rank: 6 },
@@ -325,11 +382,28 @@ const playerRankings = {
         { playerId: "f0rsaken", rank: 8 },
         { playerId: "nats", rank: 9 },
         { playerId: "zekken", rank: 10 },
-        { playerId: "bang", rank: 11 },
-        { playerId: "player12", rank: 12 },
-        { playerId: "player13", rank: 13 },
-        { playerId: "player14", rank: 14 },
-        { playerId: "player15", rank: 15 }
+        { playerId: "karon", rank: 11 },
+        { playerId: "whzy", rank: 12 },
+        { playerId: "t3xture", rank: 13 },
+        { playerId: "verno", rank: 14 },
+        { playerId: "keiko", rank: 15 }
+    ],
+    "sliggy": [
+        { playerId: "aspas", rank: 1 },
+        { playerId: "trent", rank: 5 },
+        { playerId: "jemkin", rank: 2 },
+        { playerId: "kaajak", rank: 4 },
+        { playerId: "leaf", rank: 6 },
+        { playerId: "riens", rank: 8 },
+        { playerId: "rarga", rank: 14 },
+        { playerId: "f0rsaken", rank: 7 },
+        { playerId: "bang", rank: 13 },
+        { playerId: "zekken", rank: 3 },
+        { playerId: "karon", rank: 9 },
+        { playerId: "Jinggg", rank: 12 },
+        { playerId: "t3xture", rank: 15 },
+        { playerId: "chronicle", rank: 10 },
+        { playerId: "alfajer", rank: 11 }
     ],
     "chobra": [
         { playerId: "aspas", rank: 1 },
@@ -342,11 +416,7 @@ const playerRankings = {
         { playerId: "crashies", rank: 8 },
         { playerId: "bang", rank: 10 },
         { playerId: "zekken", rank: 7 },
-        { playerId: "rarga", rank: 11 },
-        { playerId: "nats", rank: 12 },
-        { playerId: "t3xture", rank: 13 },
-        { playerId: "Jinggg", rank: 14 },
-        { playerId: "Verno", rank: 15 }
+
     ]
     // Add other talent rankings...
 };
