@@ -11,7 +11,8 @@ const allPlayers = {
             kast: "74%",
             adr: 152.3
         },
-        eliminated: false
+        eliminated: true,
+        placement: 11,
     },
     "trent": {
         id: 2,
@@ -77,7 +78,8 @@ const allPlayers = {
             kast: "78%",
             adr: 139.5
         },
-        eliminated: false
+        eliminated: true,
+        placement: 12,
     },
     "rarga": {
         id: 7,
@@ -194,7 +196,8 @@ const allPlayers = {
             kast: "77%",
             adr: 136.7,
         },
-        eliminated: false
+        eliminated: true,
+        placement: 11,
     },
     "egg": {
         id: 16,
@@ -291,8 +294,8 @@ const allPlayers = {
             kast: "72%",
             adr: 151.3,
         },
-        eliminated: false,
-        placement: 6,
+        eliminated: true,
+        placement: 12,
     },
     "alfajer": {
         id: 20,
