@@ -1,5 +1,5 @@
 // Master list of all players
-const playersChampions2023 = {
+const playersChampions2024 = {
     "aspas": {
         id: 1,
         name: "Aspas",
@@ -11,8 +11,8 @@ const playersChampions2023 = {
             kast: "74%",
             adr: 152.3
         },
-        eliminated: true,
-        placement: 11,
+        eliminated: false,
+        placement: 3,
     },
     "trent": {
         id: 2,
@@ -78,7 +78,7 @@ const playersChampions2023 = {
             kast: "78%",
             adr: 139.5
         },
-        eliminated: true,
+        eliminated: false,
         placement: 12,
     },
     "rarga": {
@@ -196,7 +196,7 @@ const playersChampions2023 = {
             kast: "77%",
             adr: 136.7,
         },
-        eliminated: true,
+        eliminated: false,
         placement: 11,
     },
     "egg": {
@@ -210,7 +210,7 @@ const playersChampions2023 = {
             kast: "67%",
             adr: 150
         },
-        eliminated: true,
+        eliminated: false,
         placement: 12,
     },
     "bren": {
@@ -224,7 +224,7 @@ const playersChampions2023 = {
             kast: "67%",
             adr: 150
         },
-        eliminated: true,
+        eliminated: false,
         placement: 11,
     },
     "mimi": {
@@ -238,7 +238,7 @@ const playersChampions2023 = {
             kast: "67%",
             adr: 150
         },
-        eliminated: true,
+        eliminated: false,
         placement: 10,
     },
     "crashies": {
@@ -294,7 +294,7 @@ const playersChampions2023 = {
             kast: "72%",
             adr: 151.3,
         },
-        eliminated: true,
+        eliminated: false,
         placement: 12,
     },
     "alfajer": {
@@ -325,7 +325,49 @@ const playersChampions2023 = {
         eliminated: false,
         placement: 7,
     },
+    "wo0t" : {
+        id: 22,
+        name: "Wo0t",
+        team: "TH",
+        image: "playerImages/wo0t.png",
+        stats: {
+            rating: 1.12,
+            kd: 1.20,
+            kast: "75%",
+            adr: 148.2,
+        },
+        eliminated: false,
+        placement: 9,
+    },
+    "sayf"  : {
+        id: 23,
+        name: "Sayf",
+        team: "VIT",
+        image: "playerImages/sayf.png",
+        stats: {
+            rating: 1.10,
+            kd: 1.15,
+            kast: "74%",
+            adr: 140.5,
+        },
+        eliminated: false,
+        placement: 10,
+    },
+    "mazino": {
+        id: 24,
+        name: "Mazino",
+        team: "KRU",
+        image: "playerImages/mazino.png",
+        stats: {
+            rating: 1.15,
+            kd: 1.22,
+            kast: "77%",
+            adr: 155.2,
+        },
+        eliminated: false,
+        placement: 13,
+    },
     // Add all other players here...
 };
 
-export default playersChampions2023;
+export default playersChampions2024;
