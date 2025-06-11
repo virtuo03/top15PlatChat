@@ -1,9 +1,10 @@
 import playersToronto from './playersToronto.js';
 import playersChampions2024 from './playersChampions2024.js';
+import playersBangkok from './playersBangkok.js';
 
 const tournaments = {
     "master-toronto": {
-        name: "VALORANT Masters Toronto",
+        name: "Masters Toronto",
         year: 2025,
         location: "Toronto, Canada",
         players: playersToronto, // Imported from playersToronto.js
@@ -118,6 +119,26 @@ const tournaments = {
                 { playerId: "sayf", rank: 8 },
                 { playerId: "mazino", rank: 9 },
                 { playerId: "f0rsaken", rank: 10 },
+            ],
+        }
+    },
+    "master-bangkok": {
+        name: "Masters Bangkok ",
+        year: 2025,
+        location: "Bangkok, Thailand",
+        players: playersBangkok, // Imported from playersChampions2023.js
+        rankings: {
+            "plat-chat": [
+                { playerId: "derke", rank: 1 },
+                { playerId: "zmjjkk", rank: 2 },
+                { playerId: "leaf", rank: 3 },
+                { playerId: "free1ng", rank: 4 },
+                { playerId: "trent", rank: 5 },
+                { playerId: "zekken", rank: 6 },
+                { playerId: "keiko", rank: 7 },
+                { playerId: "jawgemo", rank: 8 },
+                { playerId: "sayf", rank: 9 },
+                { playerId: "hyunmin", rank: 10 },
             ],
         }
     }

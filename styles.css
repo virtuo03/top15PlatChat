@@ -493,8 +493,6 @@ input:checked+.slider:before {
 }
 
 .list-view .player-image {
-    width: 180px;
-    height: auto;
     flex-shrink: 0;
 }
 
