@@ -136,6 +136,11 @@ function createPlayerCard(player, rank) {
     card.className = `player-card ${player.eliminated ? 'eliminated' : ''}`;
     card.dataset.playerId = player.id;
     
+    // Add placement data if player is eliminated
+    if (player.eliminated && player.placement) {
+        card.dataset.placement = getPlacementSuffix(player.placement);
+    }
+    
     // Add click event for modal
     card.addEventListener('click', () => showPlayerModal(player.id));
     
@@ -171,6 +176,19 @@ function createPlayerCard(player, rank) {
     `;
     
     return card;
+}
+
+// Helper function to get placement suffix (1st, 2nd, 3rd, etc.)
+function getPlacementSuffix(placement) {
+    if (placement >= 11 && placement <= 13) {
+        return placement + 'th';
+    }
+    switch (placement % 10) {
+        case 1: return placement + 'st';
+        case 2: return placement + 'nd';
+        case 3: return placement + 'rd';
+        default: return placement + 'th';
+    }
 }
 
 function showPlayerModal(playerId) {
